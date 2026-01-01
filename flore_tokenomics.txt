@@ -1,0 +1,286 @@
+# FLORE Tokenomics
+
+**Comprehensive Token Distribution & Vesting Schedule**
+
+## Token Specifications
+
+| Parameter | Value |
+|-----------|-------|
+| **Token Name** | FLORE |
+| **Token Symbol** | FLORE |
+| **Token Standard** | ERC-20 |
+| **Blockchain** | Ethereum (Mainnet) |
+| **Contract Address** | `0xf9c12195110b212Deff7d7B2D6659e8787eDBdBE` |
+| **Decimals** | 18 |
+| **Total Supply** | Fixed at deployment |
+| **Max Supply** | Fixed (no additional minting) |
+| **Supply Type** | Non-inflationary |
+
+## Supply Mechanics
+
+- ✅ **Fixed Supply:** Total supply is immutable and set at deployment
+- ❌ **No Minting:** Smart contract does not allow creation of new tokens
+- ❌ **No Rebasing:** Token balance does not automatically adjust
+- ❌ **No Automatic Burns:** No built-in deflationary mechanisms
+
+## Token Allocation Breakdown
+
+### Overview Table
+
+| Allocation Category | Percentage | Tokens* | TGE Unlock | Cliff Period | Vesting Period | Release Schedule |
+|--------------------|------------|---------|------------|--------------|----------------|------------------|
+| Foundation Treasury | 40% | TBD | 10% | 6 months | 36 months | Linear Monthly |
+| Community & Ecosystem | 30% | TBD | 15% | None | 24 months | Linear Monthly |
+| Liquidity & Markets | 20% | TBD | 100% | None | None | Immediate |
+| Team & Advisors | 10% | TBD | 0% | 12 months | 36 months | Linear Monthly |
+| **TOTAL** | **100%** | **TBD** | **28.5%** | — | — | — |
+
+*Exact token amounts depend on total supply. Visit [Etherscan](https://etherscan.io/token/0xf9c12195110b212Deff7d7B2D6659e8787eDBdBE) for current figures.
+
+---
+
+## Detailed Allocation Descriptions
+
+### 1. Foundation Treasury & Environmental Operations (40%)
+
+**Purpose:** Support nonprofit operations, environmental project funding, emergency response initiatives, and long-term mission sustainability.
+
+**Vesting Details:**
+- **TGE Unlock:** 10% (4% of total supply)
+- **Cliff Period:** 6 months
+- **Vesting Duration:** 36 months from cliff end
+- **Release Schedule:** Linear monthly vesting (approximately 2.78% per month after cliff)
+- **Monthly Release:** ~1.0% of total supply per month
+
+**Use Cases:**
+- Environmental infrastructure project funding
+- Clean energy development initiatives
+- Freshwater restoration programs
+- Air quality improvement projects
+- Disaster response and emergency relief
+- Operational expenses and administrative costs
+- Strategic reserves for mission-critical initiatives
+
+**Wallet Addresses:**
+- Primary Treasury: `[ADDRESS TBD]`
+- Emergency Fund: `[ADDRESS TBD]`
+- Operations: `[ADDRESS TBD]`
+
+---
+
+### 2. Community Governance & Ecosystem Development (30%)
+
+**Purpose:** Incentivize community participation, fund ecosystem development, support partnerships, and enable decentralized governance.
+
+**Vesting Details:**
+- **TGE Unlock:** 15% (4.5% of total supply)
+- **Cliff Period:** None
+- **Vesting Duration:** 24 months
+- **Release Schedule:** Linear monthly vesting from TGE
+- **Monthly Release:** ~1.19% of total supply per month
+
+**Use Cases:**
+- Governance participation rewards
+- Community grants and proposals
+- Ecosystem development initiatives
+- Partnership and integration funding
+- Marketing and awareness campaigns
+- Educational content creation
+- Community events and engagement programs
+
+**Wallet Addresses:**
+- Community Treasury: `[ADDRESS TBD]`
+- Governance Rewards: `[ADDRESS TBD]`
+- Grants Pool: `[ADDRESS TBD]`
+
+---
+
+### 3. DEX Liquidity & Market Stability (20%)
+
+**Purpose:** Provide initial decentralized exchange liquidity, ensure market accessibility, and support price stability during early adoption phase.
+
+**Vesting Details:**
+- **TGE Unlock:** 100% (20% of total supply)
+- **Cliff Period:** None
+- **Vesting Duration:** None
+- **Release Schedule:** Immediate (full unlock at Token Generation Event)
+- **Lock Status:** Liquidity pool tokens may be locked; tokens themselves are unlocked
+
+**Use Cases:**
+- Uniswap V2/V3 liquidity pools
+- DEX market making
+- Initial price discovery
+- Trading accessibility
+- Market depth and stability
+
+**Liquidity Pool Details:**
+- Primary Pool: FLORE/ETH on Uniswap V3
+- Pool Address: `[POOL ADDRESS TBD]`
+- LP Token Lock: `[LOCK DETAILS TBD]`
+
+---
+
+### 4. Core Team, Advisors & Technical Development (10%)
+
+**Purpose:** Compensate core development team, advisors, and nonprofit staff supporting the Foundation's technical infrastructure and mission execution.
+
+**Vesting Details:**
+- **TGE Unlock:** 0% (fully locked at launch)
+- **Cliff Period:** 12 months
+- **Vesting Duration:** 36 months from cliff end
+- **Release Schedule:** Linear monthly vesting after cliff
+- **Monthly Release:** ~0.28% of total supply per month after cliff
+
+**Use Cases:**
+- Core team compensation
+- Technical advisor compensation
+- Developer grants and bounties
+- Infrastructure maintenance
+- Smart contract development
+- Security audit funding
+- Long-term contributor retention
+
+**Wallet Addresses:**
+- Team Vesting Contract: `[ADDRESS TBD]`
+- Advisor Allocation: `[ADDRESS TBD]`
+
+---
+
+## Circulating Supply Timeline
+
+### At Token Generation Event (TGE)
+- **Foundation:** 4.0% (10% of 40%)
+- **Community:** 4.5% (15% of 30%)
+- **Liquidity:** 20.0% (100% of 20%)
+- **Team:** 0.0% (0% - fully locked)
+- **Total Circulating:** 28.5%
+
+### After 6 Months (Foundation cliff ends)
+- **Foundation:** 4.0% + monthly releases begin
+- **Community:** ~11.6% (4.5% + 6 months of vesting)
+- **Liquidity:** 20.0%
+- **Team:** 0.0% (still in cliff)
+- **Total Circulating:** ~35.6%
+
+### After 12 Months (Team cliff ends)
+- **Foundation:** ~10.0%
+- **Community:** ~19.0%
+- **Liquidity:** 20.0%
+- **Team:** 0.0% + monthly releases begin
+- **Total Circulating:** ~49.0%
+
+### After 24 Months (Community fully vested)
+- **Foundation:** ~22.0%
+- **Community:** 30.0% (fully vested)
+- **Liquidity:** 20.0%
+- **Team:** ~3.3%
+- **Total Circulating:** ~75.3%
+
+### After 48 Months (All allocations fully vested)
+- **Foundation:** 40.0% (fully vested)
+- **Community:** 30.0% (fully vested)
+- **Liquidity:** 20.0%
+- **Team:** 10.0% (fully vested)
+- **Total Circulating:** 100%
+
+---
+
+## Vesting Contract Implementation
+
+All vesting schedules are enforced through audited, time-locked smart contracts with the following features:
+
+### Security Features
+- Multi-signature withdrawal controls
+- Time-lock mechanisms preventing early withdrawals
+- Transparent on-chain vesting tracking
+- Emergency pause functionality (multi-sig controlled)
+- Immutable vesting parameters
+
+### Verification
+All vesting contracts and wallet addresses are publicly disclosed and can be verified on Etherscan:
+- [Etherscan Token Page](https://etherscan.io/token/0xf9c12195110b212Deff7d7B2D6659e8787eDBdBE)
+- [Top Holders List](https://etherscan.io/token/0xf9c12195110b212Deff7d7B2D6659e8787eDBdBE#balances)
+
+---
+
+## Compliance & Regulatory Considerations
+
+### 501(c)(3) Nonprofit Compliance
+FLORE's tokenomics structure complies with IRS regulations for tax-exempt nonprofit organizations:
+
+- Token does not represent equity or ownership
+- No profit distribution or dividend mechanisms
+- Governance utility only
+- All allocations support charitable mission
+- Transparent reporting through Form 990 filings
+
+### Classification
+- **Token Type:** Governance utility token
+- **Security Status:** Not classified as a security
+- **Tax Treatment:** Consult tax advisor for jurisdiction-specific guidance
+- **Regulatory Framework:** U.S. 501(c)(3) nonprofit regulations
+
+---
+
+## Token Holder Rights
+
+FLORE token holders receive:
+
+✅ **Governance voting rights** on Foundation proposals  
+✅ **Access to governance dashboards** and tools  
+✅ **Participation in environmental initiatives**  
+✅ **Transparent reporting** of fund allocation  
+
+FLORE token holders do **NOT** receive:
+
+❌ Equity or ownership in the Foundation  
+❌ Dividends or profit distributions  
+❌ Financial returns or investment yields  
+❌ Guaranteed appreciation or value  
+
+---
+
+## Transparency & Reporting
+
+The Verdant Current Foundation maintains full transparency through:
+
+- **Annual IRS Form 990 filings** (publicly available)
+- **On-chain transaction records** (Etherscan verification)
+- **Real-time impact dashboards** (environmental metrics)
+- **Quarterly token holder reports** (allocation updates)
+- **Public governance proposal archive** (voting history)
+
+---
+
+## Frequently Asked Questions
+
+### Can more tokens be created after deployment?
+No. The smart contract does not include minting functionality. Total supply is permanently fixed.
+
+### Are there any token burns?
+There are no automatic burn mechanisms. Any burns would be manual and publicly announced.
+
+### How can I verify vesting schedules?
+All vesting contracts are publicly viewable on Etherscan. Check the token's top holders page and contract interactions.
+
+### Is FLORE an investment?
+No. FLORE is a governance utility token for a 501(c)(3) nonprofit. It does not represent an investment or promise of returns.
+
+### How do I participate in governance?
+Token holders can vote on proposals through the Foundation's governance portal. Details available in the [Governance Guide](./docs/governance.md).
+
+---
+
+## Contact & Resources
+
+- **Documentation:** [Whitepaper](./whitepaper.pdf)
+- **Smart Contract:** [Etherscan](https://etherscan.io/token/0xf9c12195110b212Deff7d7B2D6659e8787eDBdBE)
+- **Foundation Website:** [verdantcurrent.org](#)
+- **Support:** contact@verdantcurrent.org
+
+---
+
+**Last Updated:** December 31, 2025  
+**Version:** 1.2  
+
+*This document is subject to updates as governance decisions are made. All changes will be announced to the community and reflected in updated versions.*
