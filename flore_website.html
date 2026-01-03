@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$FLORE Token - Official</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cinzel', 'Georgia', serif;
+            background: #0a0e1a;
+            color: #d4af37;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Luxury background pattern */
+        .bg-pattern {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(184, 134, 11, 0.1) 0%, transparent 50%),
+                #0a0e1a;
+            opacity: 0.8;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            padding: 30px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        }
+        
+        .logo-text {
+            font-size: 2em;
+            font-weight: 800;
+            color: #d4af37;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05em;
+            transition: all 0.3s;
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+        
+        .nav-links a:hover {
+            opacity: 1;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+        }
+        
+        .hero-logo {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto 40px;
+            border-radius: 50%;
+            box-shadow: 
+                0 0 40px rgba(212, 175, 55, 0.6),
+                0 0 80px rgba(212, 175, 55, 0.4),
+                0 0 120px rgba(212, 175, 55, 0.2);
+            animation: glow 3s ease-in-out infinite;
+        }
+        
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 
+                    0 0 40px rgba(212, 175, 55, 0.6),
+                    0 0 80px rgba(212, 175, 55, 0.4),
+                    0 0 120px rgba(212, 175, 55, 0.2);
+            }
+            50% {
+                box-shadow: 
+                    0 0 50px rgba(212, 175, 55, 0.8),
+                    0 0 100px rgba(212, 175, 55, 0.6),
+                    0 0 150px rgba(212, 175, 55, 0.4);
+            }
+        }
+        
+        .hero h1 {
+            font-size: 5.5em;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: #d4af37;
+            letter-spacing: 5px;
+            text-shadow: 
+                0 0 20px rgba(212, 175, 55, 0.5),
+                2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.6em;
+            color: #b8860b;
+            margin-bottom: 50px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            font-style: italic;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 18px 45px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            display: inline-block;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            border: 2px solid #d4af37;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #d4af37, #b8860b);
+            color: #0a0e1a;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+            background: linear-gradient(135deg, #ffd700, #d4af37);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #d4af37;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        /* Stats Section */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin: 80px 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(184, 134, 11, 0.05));
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, #d4af37, #b8860b);
+            border-radius: 15px;
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.3s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-8px);
+            border-color: #d4af37;
+        }
+        
+        .stat-card:hover::before {
+            opacity: 0.2;
+        }
+        
+        .stat-value {
+            font-size: 2.8em;
+            font-weight: 800;
+            color: #ffd700;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+        
+        .stat-label {
+            color: #b8860b;
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+        
+        /* Contract Section */
+        .contract-section {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.08), rgba(184, 134, 11, 0.05));
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 25px;
+            padding: 60px;
+            margin: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contract-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+        }
+        
+        .contract-section h2 {
+            font-size: 3em;
+            margin-bottom: 50px;
+            text-align: center;
+            color: #d4af37;
+            letter-spacing: 3px;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+        
+        .contract-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .info-item {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 28px;
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s;
+        }
+        
+        .info-item:hover {
+            border-color: #d4af37;
+            transform: translateY(-3px);
+        }
+        
+        .info-label {
+            color: #b8860b;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        
+        .info-value {
+            font-size: 1.3em;
+            color: #ffd700;
+            font-weight: 600;
+        }
+        
+        .contract-address-box {
+            background: #0a0e1a;
+            border: 3px solid #d4af37;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px 0;
+            position: relative;
+            box-shadow: 
+                0 0 30px rgba(212, 175, 55, 0.3),
+                inset 0 0 30px rgba(212, 175, 55, 0.1);
+        }
+        
+        .address-label {
+            color: #d4af37;
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            font-weight: 800;
+            text-align: center;
+        }
+        
+        .address-text {
+            font-family: 'Courier New', monospace;
+            font-size: 1.4em;
+            color: #ffd700;
+            word-break: break-all;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            text-align: center;
+        }
+        
+        .copy-btn {
+            background: linear-gradient(135deg, #d4af37, #b8860b);
+            color: #0a0e1a;
+            border: none;
+            padding: 16px 40px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 700;
+            transition: all 0.3s;
+            width: 100%;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        .copy-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5);
+            background: linear-gradient(135deg, #ffd700, #d4af37);
+        }
+        
+        .warning-box {
+            background: rgba(255, 193, 7, 0.1);
+            border-left: 4px solid #ffd700;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 40px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        .warning-box strong {
+            color: #ffd700;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+        }
+        
+        .warning-box p {
+            color: #d4af37;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        
+        /* Links Section */
+        .links-section {
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .links-section h2 {
+            font-size: 3em;
+            margin-bottom: 50px;
+            color: #d4af37;
+            letter-spacing: 3px;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+        
+        .links-grid {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .link-card {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(184, 134, 11, 0.05));
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            padding: 30px 45px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: #d4af37;
+            transition: all 0.3s;
+            min-width: 200px;
+        }
+        
+        .link-card:hover {
+            background: rgba(212, 175, 55, 0.2);
+            border-color: #d4af37;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+        
+        .link-card-title {
+            font-weight: 700;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        
+        .link-card-desc {
+            color: #b8860b;
+            font-size: 0.95em;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            border-top: 2px solid rgba(212, 175, 55, 0.3);
+            margin-top: 100px;
+        }
+        
+        .footer-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+        
+        footer p {
+            color: #b8860b;
+            margin: 12px 0;
+            letter-spacing: 1px;
+        }
+        
+        .footer-title {
+            font-size: 1.5em;
+            color: #d4af37 !important;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        /* Decorative elements */
+        .ornament {
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            margin: 30px auto;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3em;
+                letter-spacing: 3px;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2em;
+            }
+            
+            .hero-logo {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .contract-section {
+                padding: 40px 25px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .address-text {
+                font-size: 1em;
+            }
+            
+            .logo-text {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <div class="logo-container">
+                <!-- Nav logo - Your gold fleur-de-lis medallion -->
+                <img src="fleur-de-lis-small.png" alt="FLORE Logo" class="logo-image">
+                <div class="logo-text">$FLORE</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#token">Token</a></li>
+                <li><a href="#contract">Contract</a></li>
+                <li><a href="#links">Links</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <!-- Hero logo - Your gold fleur-de-lis medallion -->
+            <img src="fleur-de-lis.png" alt="FLORE Token Logo" class="hero-logo">
+            <h1>$FLORE</h1>
+            <p class="hero-subtitle">Luxury Digital Asset on Polygon</p>
+            <div class="ornament"></div>
+            <div class="cta-buttons">
+                <a href="https://polygonscan.com/address/0xf9c12195110B212Deff7d7B2D6659e8787eDBdBE" class="btn btn-primary" target="_blank">View on PolygonScan</a>
+                <a href="#contract" class="btn btn-secondary">Contract Address</a>
+            </div>
+        </section>
+        
+        <!-- Stats Section -->
+        <section class="stats" id="token">
+            <div class="stat-card">
+                <div class="stat-value">1M</div>
+                <div class="stat-label">Total Supply</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">Polygon</div>
+                <div class="stat-label">Network</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">18</div>
+                <div class="stat-label">Decimals</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">✓</div>
+                <div class="stat-label">Verified</div>
+            </div>
+        </section>
+        
+        <!-- Contract Section -->
+        <section class="contract-section" id="contract">
+            <h2>Token Information</h2>
+            <div class="ornament"></div>
+            
+            <div class="contract-grid">
+                <div class="info-item">
+                    <div class="info-label">Token Name</div>
+                    <div class="info-value">FLORE Token</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Symbol</div>
+                    <div class="info-value">$FLORE</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Blockchain</div>
+                    <div class="info-value">Polygon PoS</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Standard</div>
+                    <div class="info-value">ERC-20</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Total Supply</div>
+                    <div class="info-value">1,000,000</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Contract Status</div>
+                    <div class="info-value">✅ Verified</div>
+                </div>
+            </div>
+            
+            <div class="contract-address-box">
+                <div class="address-label">Official Contract Address</div>
+                <div class="address-text" id="contractAddress">
+                    0xf9c12195110B212Deff7d7B2D6659e8787eDBdBE
+                </div>
+                <button class="copy-btn" onclick="copyAddress()">
+                    Copy Contract Address
+                </button>
+            </div>
+            
+            <div class="warning-box">
+                <strong>⚠️ Security Notice</strong>
+                <p>Always verify this contract address on our official website and PolygonScan before making any transactions. Never trust contract addresses from unofficial sources or social media. This is the only official FLORE token contract.</p>
+            </div>
+        </section>
+        
+        <!-- Links Section -->
+        <section class="links-section" id="links">
+            <h2>Explore $FLORE</h2>
+            <div class="ornament"></div>
+            
+            <div class="links-grid">
+                <a href="https://polygonscan.com/address/0xf9c12195110B212Deff7d7B2D6659e8787eDBdBE" class="link-card" target="_blank">
+                    <div class="link-card-title">📊 Smart Contract</div>
+                    <div class="link-card-desc">View on PolygonScan</div>
+                </a>
+                <a href="https://polygonscan.com/token/0xf9c12195110B212Deff7d7B2D6659e8787eDBdBE" class="link-card" target="_blank">
+                    <div class="link-card-title">🔍 Token Tracker</div>
+                    <div class="link-card-desc">Track FLORE</div>
+                </a>
+                <a href="https://quickswap.exchange/" class="link-card" target="_blank">
+                    <div class="link-card-title">💱 Trade Now</div>
+                    <div class="link-card-desc">QuickSwap DEX</div>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer>
+            <!-- Footer logo - Your gold fleur-de-lis medallion -->
+            <img src="fleur-de-lis-small.png" alt="FLORE Logo" class="footer-logo">
+            <p class="footer-title">$FLORE Token</p>
+            <div class="ornament"></div>
+            <p>&copy; 2026 FLORE Token. All Rights Reserved.</p>
+            <p>Built on Polygon • Verified Contract • Secure & Transparent</p>
+        </footer>
+    </div>
+    
+    <script>
+        function copyAddress() {
+            const address = document.getElementById('contractAddress').textContent.trim();
+            navigator.clipboard.writeText(address).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const originalText = btn.textContent;
+                btn.textContent = '✅ Copied to Clipboard!';
+                btn.style.background = 'linear-gradient(135deg, #ffd700, #00ff88)';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = 'linear-gradient(135deg, #d4af37, #b8860b)';
+                }, 2500);
+            }).catch(err => {
+                alert('Failed to copy. Please copy manually: 0xf9c12195110B212Deff7d7B2D6659e8787eDBdBE');
+            });
+        }
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
